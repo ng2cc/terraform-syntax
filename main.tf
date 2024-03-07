@@ -29,31 +29,3 @@ resource "aws_subnet" "public_subnet_1" {
     Name = "hangaramit_public_subnet_1"
   }
 }
-
-resource "aws_subnet" "public_subnet_2" {
-  vpc_id     = aws_vpc.default.id
-  cidr_block = "10.0.101.0/24"
-
-  tags = {
-    Name = "hangaramit_public_subnet_2"
-  }
-}
-
-# Create a private Subnet
-resource "aws_subnet" "private_subnet_1" {
-  vpc_id     = aws_vpc.default.id
-  cidr_block = "10.0.110.0/24"
-
-  tags = {
-    Name = "hangaramit_private_subnet_1"
-  }
-}
-
-resource "aws_subnet" "private_subnet_2" {
-  vpc_id     = aws_vpc.default.id
-  cidr_block = "10.0.111.0/24"
-
-  tags = {
-    Name = "hangaramit_private_subnet_2"
-  }
-}
