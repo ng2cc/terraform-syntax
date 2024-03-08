@@ -34,9 +34,3 @@ resource "aws_internet_gateway" "igw" {
     Name = "hangaramit_igw_${var.env}"
   }
 }
-
-resource "aws_nat_gateway" "public_nat" {
-  count             = var.env == "dev" ? 1 : 0
-  connectivity_type = "public"
-  subnet_id         = aws_subnet.public_subnet_1[0].id
-}
