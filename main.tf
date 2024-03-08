@@ -14,7 +14,11 @@ provider "aws" {
 
 variable "envs" {
   type    = list(string)
+<<<<<<< HEAD
   default = ["dev", "prd", ""]
+=======
+  default = ["남궁규철", "벨링엄"]
+>>>>>>> 569837061003fd1f72e4f25830ac3045cbc33d25
 }
 
 module "vpc_list" {
@@ -22,3 +26,4 @@ module "vpc_list" {
   source   = "./custom_vpc"
   env      = each.key
 }
+
