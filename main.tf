@@ -14,7 +14,7 @@ provider "aws" {
 
 variable "names" {
   type    = list(string)
-  default = ["남궁규철", "조현화"]
+  default = ["남궁규철", "벨링엄"]
 }
 
 module "personal_custom_vpc" {
@@ -22,3 +22,4 @@ module "personal_custom_vpc" {
   source   = "./custom_vpc"
   env      = "personal_${each.key}"
 }
+
